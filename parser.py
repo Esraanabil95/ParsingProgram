@@ -38,8 +38,8 @@ with open('test_file2.json', 'w') as file:
 
 cwd = os.getcwd()  # current directory
 os.chdir(cwd)
-timestr = time.strftime("%Y%m%d-%H%M%S")
+timestamp = time.time()
 print(os.path.basename(__file__))
 
-with open(cwd + "/output/xml" + timestr + "file6.json", "w+") as f:
+with open(cwd + "/output/" + str(timestamp) + "file6.json", "w+") as f:
     json.dump(transaction, f)
