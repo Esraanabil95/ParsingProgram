@@ -1,5 +1,9 @@
 from xml_parser import *
-from csv_parser import *
 
-parsing_xml('file1.xml')
-parsing_csv('customers_file1.csv', 'vehicles_file1.csv')
+
+def parser(file1, file2=None):
+    if file1.endswith('.xml'):
+        parsing_xml(file1)
+
+
+parser('file1.xml')

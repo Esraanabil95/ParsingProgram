@@ -37,8 +37,6 @@ def parsing_xml(xmlfile):
     os.chdir(cwd)
     timestamp = time.time()
 
-    with open(cwd + "/output/xml/" + '{:.5f}'.format(timestamp) + "_" + os.path.splitext(xmlfile)[0] + ".json", 'w', encoding='utf-8') as jsonf:
+    with open(cwd + "/output/xml/" + '{:.5f}'.format(timestamp) + "_" + os.path.splitext(xmlfile)[0] + ".json", 'w',
+              encoding='utf-8') as jsonf:
         jsonf.write(json.dumps(transaction, indent=4))
-
-
-parsing_xml('file1.xml')
