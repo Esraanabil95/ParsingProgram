@@ -18,7 +18,7 @@ def vin_number():
         for lines in csv_reader:
             vin_list.append(lines[2])
         vins = vin_list[1:]
-        for i in vins:
+        # for i in vins:
 
 
 if __name__ == '__main__':
