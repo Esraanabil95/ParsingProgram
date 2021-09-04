@@ -7,6 +7,8 @@ def parser(file1, file2=None):
         parsing_xml(file1)
     elif file1.endswith('.csv') and file2.endswith('.csv'):
         parsing_csv(file1, file2)
+    else:
+        raise Exception("That's Not a supported file type")
 
 
 parser('file1.xml')
